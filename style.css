@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: #121212; /* fondo oscuro sólido */
+    color: #e0e0e0; /* texto claro para contraste */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* CAPAS DEL FONDO (opcional para profundidad) */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.4); /* capa sutil */
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -100px;
+    width: 200%;
+    height: 200px;
+    background-color: rgba(255, 140, 0, 0.05); /* capa naranja muy sutil */
+    transform: rotate(20deg);
+    z-index: -1;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    color: #ff9800; /* naranja para títulos */
+}
+
+/* MENÚ DE BOTONES */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.menu button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: 2px solid #ff9800; /* borde naranja */
+    border-radius: 10px;
+    background-color: #1f1f1f; /* botón oscuro */
+    color: #ff9800; /* texto naranja */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu button:hover {
+    background-color: #ff9800; /* se llena de naranja al pasar el cursor */
+    color: #121212; /* texto oscuro */
+    transform: scale(1.05);
+}
+
+/* IMÁGENES */
+.imagen-container {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.imagenCentral {
+    width: 45%;
+    max-width: 400px;
+    margin: 0 10px;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+    border: 2px solid #000000; /* borde naranja */
+}
+
+/* Posición lateral cuando se selecciona sección */
+.lateral-izq {
+    position: absolute;
+    left: 20px;
+    top: 2px; 
+}
+
+.lateral-der {
+    position: absolute;
+    right: 20px;
+    top: 2px;
+}
+
+/* SECCIONES */
+.tab-content {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 30px;
+    background-color: #1f1f1f; /* capa oscura */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(255, 140, 0, 0.2); /* sombra naranja */
+    display: none;
+    border: 1px solid #ff9800; /* borde naranja sutil */
+}
+
+.tab-content h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: #ff9800; /* títulos naranja */
+}
+
+.tab-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0; /* texto claro */
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ff9800;
+    margin-top: 100px;
+}
